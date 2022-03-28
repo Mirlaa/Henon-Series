@@ -112,9 +112,6 @@ for epoca in range(0,epoca_max):
         # Atualização dos pesos
         V = (V +lr*np.transpose(hl)*delta_Y)
         
-        entradas = np.zeros([entradas.shape[0],delta_yl.shape[1]])
-        entradas = entradas + entradas.reshape(-1,1)
-        
         W = np.add(W ,np.multiply(lr,np.multiply(entradas.T,np.matrix(delta_yl).T)))
 #%%
 for i in range(0,N_teste):
@@ -143,4 +140,3 @@ plt.xlabel('Tempo')
 plt.ylabel('Valores Normalizados')
 plt.legend()
 plt.show()
-
