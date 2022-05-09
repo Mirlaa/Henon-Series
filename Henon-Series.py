@@ -45,7 +45,7 @@ def deriv_tanh(x,a=1,b=1):
     return np.multiply(np.multiply((b/a),(a + tanh(x,a,b))),(a - tanh(x,a,b))) # Derivada da Tang. Hiperbólica
 
 #%%
-data = np.loadtxt('D:\mirla\Desktop\Eng. Elétrica\8° periodo\REDES NEURAIS\José Maria\TAREFA 09\henon_200_dados.dat', unpack = True)
+data = np.loadtxt('henon_200_dados.dat', unpack = True)
 x = np.arange(1, len(data)+1, 1)
 fig = plt.figure(figsize=(6, 3))
 plt.plot(x,data)
